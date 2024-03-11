@@ -1,32 +1,26 @@
-import 'dart:io';
-
 void main() {
-  List<int> fibonacci = [0, 1];
-  int? numero;
+  int verificarNumero = 5;
+  print("O número para ser verificado se pertence à sequência de Fibonacci é: $verificarNumero");
 
-  print(
-      "Informe um número para verificar se pertence à sequência de Fibonacci:");
-  String? input = stdin.readLineSync();
+  List<int> listaFibonacci = fibonacci(verificarNumero);
+  ifContemNumero(verificarNumero, listaFibonacci);
+}
 
-  if (input != null) {
-    numero = int.tryParse(input);
+List<int> fibonacci(int verificarNumero) {
+  List<int> listaFibonacci = [0, 1];
+  for (int i = 2; i < verificarNumero; i++) {
+    listaFibonacci.add(listaFibonacci[i - 1] + listaFibonacci[i - 2]);
+  }
+  for (int i = 0; i < verificarNumero; i++) {
+    print('Fibonacci $i: ${listaFibonacci[i]}');
+  }
+  return listaFibonacci;
+}
+
+void ifContemNumero(int verificarNumero, List<int> listaFibonacci) {
+  if (listaFibonacci.contains(verificarNumero)) {
+    print("$verificarNumero pertence à sequência de Fibonacci.");
   } else {
-    return;
-  }
-
-  print("o numero é igual a: $numero");
-
-  for (int i = 2; i < numero!; i++) {
-    fibonacci.add(fibonacci[i - 1] + fibonacci[i - 2]);
-  }
-  print('Sequência de Fibonacci com $numero números:');
-  for (int i = 0; i < numero; i++) {
-    print('Fibonacci $i: ${fibonacci[i]}');
-  }
-
-  if (fibonacci.contains(numero)) {
-    print("$numero pertence à sequência de Fibonacci.");
-  } else {
-    print("$numero não pertence à sequência de Fibonacci.");
+    print("$verificarNumero não pertence à sequência de Fibonacci.");
   }
 }
