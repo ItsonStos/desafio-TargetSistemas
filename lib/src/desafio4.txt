@@ -6,13 +6,13 @@ Como você faria para descobrir, usando apenas duas idas até uma das salas das 
 controla cada lâmpada?
 
 
-Para descobrir qual interruptor controla cada lâmpada em apenas uma ida até a sala, 
-deve-se ligar o interruptor 1 e deixa-lo ligado até que a lâmpanda cuja a qual ela controla
-consiga esquentar. Despois disso, desliga o interruptor 1 e liga o interruptor 2 e vai à 
-sala das lâmpadas.
+Para descobrir qual interruptor controla cada lâmpada, é possível realizar em apenas uma única ida até a sala
+das lâmpadas. Considerando que cada interruptor aciona uma das três lâmpadas e apenas uma.
+Primeiramente deve ligar o interruptor 1 e deixá-lo ligado até que a lâmpada cuja a qual ela controla,
+consiga esquentar. Depois disso, desliga o interruptor 1 e liga o interruptor 2 e vai à sala das lâmpadas.
 Ao verificar a primeira lâmpada, se ela esta ligada, é o segundo interruptor que a controla, 
 caso esteja quente é o primeiro interruptor que a controla e caso esteja fria é o terceiro interruptor.
-Método que pode ser reptido para as outras lâmpadas.
+Método que pode ser repetido para as outras lâmpadas.
 Interruptor 1 - Controlará a lâmpada que estiver apagada e quente;
 Interruptor 2 - Controlará a lâmpada que estiver acessa;
 Interruptor 3 - Controlará a lâmpada que estiver apagada e fria. 
